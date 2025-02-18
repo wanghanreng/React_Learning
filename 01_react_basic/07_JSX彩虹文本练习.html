@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06_JSX事件绑定</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="./lib/react.js"></script>
+    <script src="./lib/react-dom.js"></script>
+    <script src="./lib/babel.js"></script>
+
+    <script type="text/babel">
+      const colorList = [
+        "#FF0000", // 红
+        "#FFA500", // 橙
+        "#FFFF00", // 黄
+        "#008000", // 绿
+        "#0000FF", // 蓝
+        "#4B0082", // 靛
+        "#EE82EE", // 紫
+      ];
+
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      let clickCount = 0;
+      let currentColorIndex = 0;
+      let achievementVisible = false;
+
+      const btnClick = () => {
+        clickCount++;
+        currentColorIndex = clickCount % colorList.length; // 循环色彩
+        achievementVisible = clickCount > 10; // 判断成就是否可见
+        rootRender();
+      };
+
+      const rootRender = () => {
+        root.render(
+          <div>
+            <h2
+              style={{
+                color: clickCount > 0 ? colorList[currentColorIndex] : "#000",
+              }}
+            >
+              你已经点击了 {clickCount} 次
+            </h2>
+
+            <button onClick={btnClick}>点我变彩虹色 🌈</button>
+            {achievementVisible && (
+              <div style={{ color: "green" }}>
+                你点击了超过 10 次！触发了隐藏奖励
+              </div>
+            )}
+          </div>
+        );
+      };
+
+      rootRender();
+    </script>
+  </body>
+</html>
