@@ -1,0 +1,68 @@
+/* BookDetail.css */  
+.book-detail-wrapper {  
+    display: flex; /* 使用 Flexbox 布局以并排显示内容 */  
+    align-items: flex-start; /* 垂直顶部对齐 */  
+}  
+
+.book-detail-content {  
+    display: flex; /* 使用 Flexbox 布局 */  
+    flex-grow: 1; /* 自适应宽度 */  
+}  
+
+.book-cover {  
+    width: 150px; /* 封面宽度 */  
+    height: 220px; /* 封面高度 */  
+    object-fit: cover; /* 固定图片比例 */  
+    border-radius: 8px; /* 圆角 */  
+    margin-right: 20px; /* 右侧间距 */  
+    border: 1px solid #ddd; /* 边框 */  
+}  
+
+.book-info {  
+    flex: 1; /* 自适应宽度 */  
+    background-color: #f0f8ff; /* 背景颜色 */  
+    padding: 15px; /* 内边距 */  
+    border-radius: 8px; /* 圆角 */  
+}  
+
+.book-title {  
+    margin: 0; /* 取消默认 margin */  
+    font-size: 24px; /* 书名字号 */  
+    color: #333; /* 书名颜色 */  
+}  
+
+.author-category {  
+    font-size: 16px; /* 作者与分类的字号 */  
+    margin: 10px 0; /* 上下间距 */  
+}  
+
+.separator {  
+    margin: 0 5px; /* 分隔符的左右间隔 */  
+}  
+
+.description {  
+    margin-top: 10px; /* 与其他内容的间距 */  
+    font-size: 14px; /* 描述字号 */  
+    line-height: 1.6; /* 行高 */  
+}  
+
+.back-button {  
+    margin-top: 20px; /* 与内容的间距 */  
+    padding: 10px 15px; /* 按钮内边距 */  
+    font-size: 16px; /* 按钮字号 */  
+    color: #fff; /* 字体颜色 */  
+    background-color: #007bff; /* 按钮背景色 */  
+    border: none; /* 无边框 */  
+    border-radius: 4px; /* 圆角 */  
+    cursor: pointer; /* 鼠标样式 */  
+}  
+
+.detail-description {
+    white-space: pre-wrap; /* 保留空白符序列，但是正常换行 */
+    word-wrap: break-word; /* 长单词或URL地址强制换行 */
+    overflow-wrap: break-word; /* 长单词或URL地址强制换行 */
+  }
+
+.back-button:hover {  
+    background-color: #0056b3; /* 悬停变化的背景色 */  
+}

@@ -1,0 +1,11 @@
+/* BookItem.css */  
+.book-item-container {  
+    display: flex;               /* 使用 Flexbox 布局 */  
+    flex-direction: column;      /* 竖直排列（上下） */  
+    align-items: center;         /* 水平居中对齐 */  
+  }  
+  
+  .book-item-container .ant-card {  
+    margin: 15px 0;             /* 设置上下间距 */  
+    width: 1000px;               /* 设置固定宽度 */  
+  }

@@ -1,0 +1,58 @@
+/* BookCard.css */  
+.book-card {  
+    width: 400px; /* 设置卡片宽度 */  
+    margin: 15px 0; /* 上下间距 */  
+  }  
+  
+  .book-card-content {  
+    display: flex; /* 使用Flexbox布局 */  
+    position: relative; /* 使按钮绝对定位相对于此容器 */  
+  }  
+  
+  .book-cover {  
+    width: 120px; /* 封面图宽度 */  
+    height: 180px; /* 封面图高度 */  
+    object-fit: cover; /* 保持图像的比例 */  
+    margin-right: 10px; /* 增加右侧间距 */  
+  }  
+  
+  .book-info {  
+    flex: 1; /* 信息区域自适应 */  
+    display: flex; /* 再次使用flex布局以控制位置 */  
+    flex-direction: column; /* 列表方向 */  
+  }  
+  
+  .book-title {  
+    margin: 0; /* 去掉顶部的默认 margin */  
+    font-size: 18px; /* 设置书名的字号 */  
+  }  
+  
+  .author-category {  
+    display: flex; /* 使作者和类别在同一行 */  
+    align-items: center; /* 垂直居中对齐 */  
+  }  
+  
+  .author, .category {  
+    font-size: 14px; /* 字号 */  
+  }  
+  
+  .separator {  
+    margin: 0 5px; /* 分隔符的左右间隔 */  
+  }  
+  
+  .description {
+    max-height: 100px; /* 限制描述的高度 */
+    overflow: hidden; /* 超出部分隐藏 */
+    text-overflow: ellipsis; /* 省略文本 */
+    display: -webkit-box; /* 为多行文本做省略 */
+    -webkit-box-orient: vertical; /* 竖排 */
+    margin-bottom: 15px; /* 给描述与下方元素增加下边距 */
+  }
+
+  .book-actions {  
+    position: absolute; /* 绝对定位按钮 */  
+    bottom: 10px; /* 距底部10px */  
+    right: 10px; /* 距右侧10px */  
+  }
+  
+  

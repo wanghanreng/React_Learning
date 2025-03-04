@@ -1,0 +1,28 @@
+.card {  
+    border: 1px solid #ebebeb; /* 边框颜色 */  
+    border-radius: 8px; /* 圆角 */  
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 阴影 */  
+    margin: 16px; /* 外边距 */  
+    width: 300px; /* 宽度 */  
+    background-color: #fff; /* 背景色 */  
+    overflow: hidden; /* 隐藏超出部分 */  
+}  
+
+.card-header {  
+    font-size: 20px; /* 标题字体大小 */  
+    font-weight: bold; /* 加粗 */  
+    padding: 16px; /* 内边距 */  
+    background-color: #f2f2f2; /* 背景色 */  
+    border-bottom: 1px solid #ebebeb; /* 底部边框 */  
+}  
+
+.card-body {  
+    padding: 16px; /* 内边距 */  
+    min-height: 100px; /* 最小高度 */  
+}  
+
+.card-footer {  
+    padding: 16px; /* 内边距 */  
+    border-top: 1px solid #ebebeb; /* 顶部边框 */  
+    text-align: right; /* 右对齐 */  
+}
