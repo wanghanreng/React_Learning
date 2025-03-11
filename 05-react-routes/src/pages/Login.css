@@ -1,0 +1,36 @@
+/* src/pages/Login.css */  
+
+.container {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    flex-direction: column;  
+    height: 100vh;  
+    background-color: #f0f0f0;  
+}  
+
+.title {  
+    margin-bottom: 20px;  
+}  
+
+.form {  
+    display: flex;  
+    flex-direction: column;  
+    width: 300px;  
+}  
+
+.input {  
+    margin-bottom: 10px;  
+    padding: 10px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+}  
+
+.button {  
+    padding: 10px;  
+    background-color: #28a745;  
+    color: #fff;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+}

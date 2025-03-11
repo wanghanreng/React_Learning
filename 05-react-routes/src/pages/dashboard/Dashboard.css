@@ -1,0 +1,20 @@
+nav {  
+  margin: 20px;  
+}  
+
+nav a {  
+  text-decoration: none;  
+  padding: 10px 15px;  
+  color: #007bff; /* 默认链接颜色 */  
+  border-radius: 5px; /* 添加圆角 */  
+}  
+
+nav a.active {  
+  background-color: #007bff; /* 选中链接的背景颜色 */  
+  color: white; /* 选中链接的文本颜色 */  
+}  
+
+nav a:hover {  
+  background-color: rgba(0, 123, 255, 0.1); /* 悬停时的背景颜色 */  
+  color: #007bff; /* 悬停时的文本颜色 */  
+}

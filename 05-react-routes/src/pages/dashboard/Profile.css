@@ -1,0 +1,36 @@
+.profile-container {  
+    display: flex;                /* 使用 flexbox 布局 */  
+    height: 100vh;               /* 充满整个视口高度 */  
+  }  
+  
+  .profile-nav {  
+    width: 100px;                /* 导航区域的宽度 */  
+    background-color: #f8f9fa;  /* 背景颜色 */  
+    padding: 10px;               /* 内边距 */  
+    border-right: 1px solid #dddddd; /* 右侧边框 */  
+    display: flex;               /* 使用 flexbox 排列 */  
+    flex-direction: column;      /* 竖向排列 */  
+  }  
+  
+  .profile-nav a {  
+    padding: 10px 15px;         /* 增加内边距 */  
+    text-decoration: none;       /* 不显示下划线 */  
+    color: #333;                 /* 默认文本颜色 */  
+    border-radius: 5px;         /* 圆角 */  
+    margin-bottom: 5px;         /* 下方间距 */   
+  }  
+  
+  .profile-nav a:hover {  
+    background-color: #e9ecef; /* 悬停效果 */  
+  }  
+  
+  .profile-nav .active {          /* 激活项样式 */  
+    background-color: #007bff;   /* 激活项背景色 */  
+    color: white;                /* 激活项文本颜色 */  
+  }  
+  
+  .profile-content {  
+    flex-grow: 1;                 /* 内容区域自适应 */  
+    padding: 20px;               /* 内容内边距 */  
+    background-color: #ffffff;   /* 内容背景颜色 */  
+  }

@@ -1,0 +1,47 @@
+/* app.css */  
+
+/* 导航条的样式 */  
+nav {  
+  display: flex; /* 使用 flexbox 布局 */  
+  align-items: center; /* 垂直居中对齐 */  
+  margin: 20px; /* 导航条的外边距 */  
+}  
+
+/* 导航链接的样式 */  
+nav .nav-links {  
+  display: flex; /* 使导航链接在一行显示 */  
+  gap: 15px; /* 设置导航链接之间的间距 */  
+}  
+
+nav a {  
+  text-decoration: none; /* 取消下划线 */  
+  padding: 10px 15px; /* 内边距 */  
+  color: #007bff; /* 默认链接颜色 */  
+  border-radius: 5px; /* 添加圆角 */  
+}  
+
+nav a.active {  
+  background-color: #007bff; /* 选中链接的背景颜色 */  
+  color: white; /* 选中链接的文本颜色 */  
+}  
+
+nav a:hover {  
+  background-color: rgba(0, 123, 255, 0.1); /* 悬停时的背景颜色 */  
+  color: #007bff; /* 悬停时的文本颜色 */  
+}  
+
+/* 按钮的样式 */  
+.popover-button {  
+  margin-left: auto; /* 将按钮推到右侧 */  
+  margin-right: 100px;   /* 右边距 */
+  background: none; /* 确保背景透明 */  
+  border: none; /* 取消按钮边框 */  
+  padding: 0; /* 无内边距 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */  
+  color: #007bff; /* 按钮文本颜色 */  
+  font-size: 16px; /* 按钮文本大小 */  
+}  
+
+.popover-button:hover {  
+  text-decoration: underline; /* 悬停时添加下划线 */  
+}
