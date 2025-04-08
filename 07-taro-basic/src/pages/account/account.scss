@@ -8,6 +8,8 @@
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     .summary-item {
@@ -16,13 +18,13 @@
       align-items: center;
 
       .label {
-        font-size: 14px;
+        font-size: 40px;
         color: #666;
         margin-bottom: 8px;
       }
 
       .amount {
-        font-size: 20px;
+        font-size: 30px;
         font-weight: bold;
 
         &.income {

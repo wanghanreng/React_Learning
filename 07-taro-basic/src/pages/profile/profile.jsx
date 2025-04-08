@@ -25,6 +25,27 @@ const Profile = () => {
     }
   }
 
+  const handleLogout = () => {
+    // 清除本地存储的用户信息
+    Taro.removeStorageSync("isLoggedIn");
+    Taro.removeStorageSync("avatarUrl");
+    Taro.removeStorageSync("username");
+
+    // 更新状态
+    checkLoginStatus();
+
+    // 显示提示并跳转到首页
+    Taro.showToast({
+      title: "已退出登录",
+      icon: "success",
+      duration: 2000
+    });
+
+    Taro.switchTab({
+      url: "/pages/index/index"
+    });
+  };
+
   useEffect(() => {
     // 在组件加载时获取用户信息
     checkLoginStatus();
@@ -57,6 +78,12 @@ const Profile = () => {
               title="设置"
               arrow="right"
               iconInfo={{ size: 25, color: "#6190E8", value: "settings" }}
+            />
+            <AtListItem
+              title="退出登录"
+              arrow="right"
+              iconInfo={{ size: 25, color: "#FF4949", value: "logout" }}
+              onClick={handleLogout}
             />
             </AtList>
         ) : (

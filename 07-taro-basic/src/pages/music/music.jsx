@@ -14,8 +14,8 @@ const Music = () => {
     const [audioContext, setAudioContext] = useState(null);
     const [currentSong, setCurrentSong] = useState({
         id: 1,
-        title: "夜曲",
-        artist: "周杰伦",
+        title: "无播放",
+        artist: "无播放",
         cover: "https://p2.music.126.net/0uZ_bKtm4E188Uk9LFN1qg==/109951167738811522.jpg"
     });
 
@@ -32,35 +32,35 @@ const Music = () => {
             title: "音乐2",
             artist: "艺术家2",
             cover: "https://p1.music.126.net/9kZl6NRj3HxmQQ8DqTjZ4Q==/109951167728108329.jpg",
-            src: '/assets/music/2.mp3'
+            src: 'https://wanghanreng.oss-cn-guangzhou.aliyuncs.com/mp3/2.mp3'
         },
         {
             id: 3,
             title: "音乐3",
             artist: "艺术家3",
             cover: "https://p2.music.126.net/dnxT0lpiU4gqHH_wvf1TYA==/109951167643767467.jpg",
-            src: "../../assets/music/3.mp3"
+            src: "https://wanghanreng.oss-cn-guangzhou.aliyuncs.com/mp3/3.mp3"
         },
         {
           id: 4,
           title: "音乐4",
           artist: "艺术家4",
           cover: "https://p2.music.126.net/dnxT0lpiU4gqHH_wvf1TYA==/109951167643767467.jpg",
-          src: "../../assets/music/4.mp3"
+          src: "https://wanghanreng.oss-cn-guangzhou.aliyuncs.com/mp3/4.mp3"
         },
         {
           id: 5,
           title: "音乐5",
           artist: "艺术家5",
           cover: "https://p2.music.126.net/dnxT0lpiU4gqHH_wvf1TYA==/109951167643767467.jpg",
-          src: "../../assets/music/5.mp3"
+          src: "https://wanghanreng.oss-cn-guangzhou.aliyuncs.com/mp3/5.mp3"
         },
         {
           id: 6,
           title: "音乐6",
           artist: "艺术家6",
           cover: "https://p2.music.126.net/dnxT0lpiU4gqHH_wvf1TYA==/109951167643767467.jpg",
-          src: "../../assets/music/6.mp3"
+          src: "https://wanghanreng.oss-cn-guangzhou.aliyuncs.com/mp3/6.mp3"
         }
     ];
 

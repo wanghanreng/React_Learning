@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { View, Text } from '@tarojs/components';
-import { AtForm, AtInput, AtButton, AtList, AtListItem, AtTabs, AtTabsPane, AtFloatLayout, AtSwipeAction, AtModal } from 'taro-ui';
+import { AtForm, AtInput, AtButton, AtList, AtListItem, AtTabs, AtTabsPane, AtFloatLayout, AtSwipeAction, AtModal, AtRadio } from 'taro-ui';
 import Taro from '@tarojs/taro';
 import './account.scss';
 
@@ -106,30 +106,22 @@ const Account = () => {
           <AtTabsPane current={currentTab} index={index} key={index}>
             <AtList>
               {filteredRecords().map(record => (
-                <AtSwipeAction
+                <AtListItem
                   key={record.id}
-                  options={[{
-                    text: '删除',
-                    style: {
-                      backgroundColor: '#FF4949'
-                    }
-                  }]}
+                  title={record.note || '无备注'}
+                  note={record.date}
+                  extraText={`¥${record.amount.toFixed(2)}`}
+                  iconInfo={{
+                    size: 25,
+                    color: record.type === '收入' ? '#78c06e' : '#f76a24',
+                    value: record.type === '收入' ? 'add-circle' : 'subtract-circle',
+                  }}
+                  arrow='right'
                   onClick={() => {
                     setRecordToDelete(record);
                     setIsModalOpen(true);
                   }}
-                >
-                  <AtListItem
-                    title={record.note || '无备注'}
-                    note={record.date}
-                    extraText={`¥${record.amount.toFixed(2)}`}
-                    iconInfo={{
-                      size: 25,
-                      color: record.type === '收入' ? '#78c06e' : '#f76a24',
-                      value: record.type === '收入' ? 'add-circle' : 'subtract-circle',
-                    }}
-                  />
-                </AtSwipeAction>
+                />
               ))}
             </AtList>
           </AtTabsPane>
@@ -156,13 +148,13 @@ const Account = () => {
             value={formData.amount}
             onChange={(value) => setFormData({ ...formData, amount: value })}
           />
-          <AtInput
-            name='type'
-            title='类型'
-            type='text'
-            placeholder='收入/支出'
+          <AtRadio
+            options={[
+              { label: '支出', value: '支出' },
+              { label: '收入', value: '收入' }
+            ]}
             value={formData.type}
-            onChange={(value) => setFormData({ ...formData, type: value })}
+            onClick={(value) => setFormData({ ...formData, type: value })}
           />
           <AtInput
             name='date'
