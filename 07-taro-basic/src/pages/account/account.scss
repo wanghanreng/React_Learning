@@ -1,0 +1,69 @@
+.account-page {
+  padding: 20px;
+
+  .account-summary {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .summary-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .label {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 8px;
+      }
+
+      .amount {
+        font-size: 20px;
+        font-weight: bold;
+
+        &.income {
+          color: #78c06e;
+        }
+
+        &.expense {
+          color: #f76a24;
+        }
+
+        &.balance {
+          color: #2d8cf0;
+        }
+      }
+    }
+  }
+
+  .add-button {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .at-float-layout .at-form {
+    padding: 20px;
+
+    .at-input {
+      margin-bottom: 15px;
+    }
+
+    .at-button {
+      margin-top: 20px;
+    }
+  }
+
+  .at-list__item {
+    .at-list__item-extra {
+      max-width: 120px;
+      color: #333;
+      font-weight: bold;
+    }
+  }
+}
