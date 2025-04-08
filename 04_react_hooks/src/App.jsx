@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, {useState, useEffect, useDebugValue} from "react";
-import TodoList from "./component/TodoList";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import TodoList from "./component/useState/TodoList";
 import UserForm from "./Login/UserForm";
-import { UserProvider } from "./Login/UserContext";
 import Time from "./component/Time";
 import Weather from "./component/Weather";
 import TextInput from "./component/useState/TextInput";
@@ -24,6 +24,15 @@ import AnimateBox from "./component/useLayoutEffect/AnimateBox";
 import ComponentSize from "./component/useLayoutEffect/ComponentSize";
 import Data from "./component/Data";
 import Search from "./component/Search";
+import CounterUseState from "./component/useState/CounterUseState";
+import Profile from "./component/useState/Profile";
+import UserProfile from "./component/useContext/UserProfile";
+import UserProvider from "./component/useContext/UserProvider";
+import UpdateUser from "./component/useContext/UpdateUser";
+import CounterZustamd from "./component/CounterZustand";
+import ProductList from './component/shop/ProductList';  
+import Cart from './component/shop/Cart';  
+import "./App.css";
 
 // function useCustomHook(value) {
 //   useDebugValue(value ? "Active" : "Inactive");
@@ -55,19 +64,13 @@ const App = () => {
     console.log("Searching for:",query); 
   };
 
-  return (
-    <div>
-      {/* <button onClick={() => setIsActive(!isActive)}>
-        {isActive ? "Deactivate" : "Activate"}
-      </button>
-      <h2>{data.content}</h2>  
-      <p>来源: {data.origin}</p>  
-      <p>作者: {data.name}</p>  
-      <p>标签: {data.tag}</p>   */}
-      <Data />
-      <h1>Search Example</h1>
-      <Search onSearch={handleSearch}/>
-    </div>
+  return (  
+    <Router>  
+      <div className="container mx-auto p-4">  
+        <ProductList /> {/* 产品列表会在页面上显示 */}  
+        <Cart /> {/* 购物车将直接显示在页面底部 */}  
+      </div>  
+    </Router>  
   );
 };
 
