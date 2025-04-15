@@ -1,5 +1,10 @@
 /* eslint-disable no-undef */
 export default defineAppConfig({
+  permission: {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示",
+    },
+  },
   pages: [
     'pages/index/index',
     'pages/discover/discover',
@@ -8,7 +13,22 @@ export default defineAppConfig({
     'pages/login/login',
     'pages/music/music',
     'pages/account/account',
-    'pages/BusinessCard/BusinessCard'
+    'pages/BusinessCard/BusinessCard',
+    'pages/component/component',
+    'pages/basic/basic',
+    'pages/container/container',
+    'pages/form/form',
+    'pages/media/media',
+    'pages/skyline/skyline',
+    'pages/contact/contact',
+    'pages/device/device',
+    'pages/map/map',
+    'pages/dingwei/dingwei',
+    'pages/api/index',
+    'pages/news/news',
+    'pages/movable/movable',
+    'pages/baidu/baidu',
+    'pages/other/other'
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -33,6 +53,18 @@ export default defineAppConfig({
         text: '发现',
         iconPath: './assets/tabs/discover.png',
         selectedIconPath: './assets/tabs/discover-active.png'
+      },
+      {
+        pagePath: 'pages/component/component',
+        text: '组件',
+        iconPath: './assets/tabs/component.png',
+        selectedIconPath: './assets/tabs/component-active.png'
+      },
+      {
+        pagePath: 'pages/api/index',
+        text: 'API',
+        iconPath: './assets/tabs/Api.png',
+        selectedIconPath: './assets/tabs/Api-active.png'
       },
       {
         pagePath: 'pages/profile/profile',

@@ -1,0 +1,61 @@
+.news-list {
+  margin: 16px;
+  background-color: #f5f5f5; // 背景色
+
+  .news-item {
+    background-color: #fff; // 条目背景色
+    border-radius: 8px; // 圆角
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // 阴影
+    margin-bottom: 16px; // 条目之间的间距
+    display: flex; // 使用 Flexbox 布局
+    padding: 16px; // 内边距
+
+    .news-image {
+      width: 160px; // 图片宽度
+      height: 135px; // 图片高度
+      border-radius: 4px; // 图片圆角
+      margin-right: 12px; // 图片与文本之间的间距
+    }
+
+    .news-content {
+      flex: 1; // 让内容区域填满剩余空间
+      display: flex; // 使用 Flexbox 布局
+      flex-direction: column; // 垂直排列
+      justify-content: space-between; // 在垂直方向上分散对齐
+
+      .news-title {
+        font-size: 22px; // 增加标题字体大小
+        font-weight: bold; // 加粗
+        color: #333; // 文字颜色
+        margin-bottom: 10px; // 标题与描述之间的间距
+      }
+
+      .news-description {
+        font-size: 16px; // 增加描述字体大小
+        color: #666; // 描述文字颜色
+        margin-bottom: 10px; // 描述与其他信息之间的间距
+      }
+
+      .news-meta {
+        display: flex; // 使用 Flexbox 布局
+        justify-content: space-between; // 在水平方向上分散对齐
+        font-size: 14px; // 增加来源和时间字体大小
+        color: #999; // 来源和时间文字颜色
+
+        .news-source {
+          margin-right: 10px; // 来源与时间之间的间距
+        }
+      }
+    }
+  }
+
+  .loading-text {
+    text-align: center; // 加载文本居中
+    margin: 16px 0; // 上下间距
+  }
+
+  .error-message {
+    text-align: center; // 错误消息居中
+    color: red; // 错误消息颜色
+  }
+}

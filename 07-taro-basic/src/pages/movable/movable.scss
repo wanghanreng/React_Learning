@@ -1,0 +1,16 @@
+.movable-page {
+  padding: 20px;
+
+  .movable-area {
+    width: 100%;
+    height: 300px;
+    background-color: #ffeb3b;
+    margin: 0 auto;
+  }
+
+  .movable-block {
+    width: 100px;
+    height: 100px;
+    background-color: #ff4444;
+  }
+}
